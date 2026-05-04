@@ -1,0 +1,23 @@
++ Suggestion:
+Air Quality Index (AQI) Monitoring:
+When to Act: Check every morning before leaving the house and before planning outdoor workouts.
+Mandatory: When you see visible haze or smog, or when local news reports an "Orange" or "Red" alert.
+Not Necessary: When the AQI is below 50 (Green), the air is considered safe for most people.
+Wearing Protective Masks (Use N95/KN95):
+Mandatory: When AQI is above 100 or when traveling through high-traffic zones (commuting by motorcycle). Standard surgical masks are not effective against PM2.5. Optional: When AQI is between 50-100, though sensitive groups (children, elderly) should still consider it.
+Not Necessary: When walking in a park with AQI below 50 or when staying in a room with a running HEPA air purifier.
+Outdoor Physical Activity
+Mandatory (Move Indoors): If AQI exceeds 150. Heavy breathing during exercise increases the intake of pollutants into the deep lung tissues. 
+Avoid Peak Hours: Never exercise near main roads during rush hour (7:00–9:00 AM and 5:00–7:00 PM) regardless of the general AQI, as local pollution levels are significantly higher.
+Not Necessary: When AQI is below 50, outdoor exercise is highly recommended for health.
+Managing Indoor Air Quality
+Mandatory (Close Windows): During "Thermal Inversion" (thick morning fog) or when neighbors are burning waste/incense. Run air purifiers with HEPA filters during these times.
+Ventilation (Open Windows): Open windows only when the outdoor AQI is low (Green) to allow fresh air circulation and reduce CO2 and VOC buildup.
+Not Necessary: Keeping windows closed 24/7. This can lead to "Sick Building Syndrome" due to a lack of oxygen and accumulation of indoor toxins.
+5. Personal Hygiene & Nutrition
+Mandatory: After a long commute or being outdoors in a polluted city, use a saline nasal spray and gargle to remove trapped particles from the mucous membranes.
+Dietary Support: Maintain a high intake of antioxidants (Vitamin C and E) daily to neutralize free radicals caused by pollution.
+Not Necessary: Excessive use of chemical throat sprays unless prescribed by a doctor; simple saline is usually sufficient for cleaning.
+Indoor Vegetation
+Recommended: Place plants like Snake Plants or Aloe Vera in bedrooms and living rooms to naturally assist in filtering Volatile Organic Compounds (VOCs).
+Not Necessary: Relying on plants as the only source of filtration. Plants help, but they cannot replace a mechanical HEPA filter during severe pollution events.

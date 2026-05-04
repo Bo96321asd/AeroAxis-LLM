@@ -1,0 +1,24 @@
+# Bỏ qua thư mục môi trường ảo của Python (rất nặng)
+venv/
+.venv/
+env/
+Lib/
+Scripts/
+
+# Bỏ qua các file bộ nhớ đệm do Python tự sinh ra ra
+__pycache__/
+*.py[cod]
+*$py.class
+
+# BẢO MẬT: Bỏ qua file chứa API Keys (Cực kỳ quan trọng)
+.env
+
+# Bỏ qua file cấu hình riêng của VS Code
+.vscode/
+
+# Bỏ qua file rác của hệ điều hành
+.DS_Store
+Thumbs.db
+
+# (Tùy chọn) Bỏ qua thư mục vector database nếu bạn có lưu FAISS ra ổ cứng
+faiss_index/
