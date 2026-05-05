@@ -14,6 +14,7 @@ import random
 import re
 import Config
 
+# System
 logging.getLogger("langchain_core").setLevel(logging.ERROR) 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -45,7 +46,7 @@ embeddings = HuggingFaceEmbeddings(
 )
 
 vector_database = FAISS.from_documents(
-    # inputs
+    # Inputs
     # Begin
     documents = splits,
     embedding = embeddings,
@@ -75,8 +76,9 @@ rag_chain = (
     | StrOutputParser()
 )
 
+# Prompt 
 last_prompt = None # In case LLM give the same question 
-print("=" * 50) # Split log and performance 
+print("=" * 140) # Split log and performance 
 print(f"{random.choice(Config.open_message)} :3")
 while True:
     question = input()
