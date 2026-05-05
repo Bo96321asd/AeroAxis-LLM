@@ -20,15 +20,15 @@ Project/
 
 ```
 # 1. Introduction 
-This project demonstrates LLM set-up, knowledge base for AI explaination and recommendation on AeroAxis - an interactive air quality mapping system for Ha Noi.
+This project demonstrates an LLM set-up, knowledge base for AI explaination and recommendation on AeroAxis - an interactive air quality mapping system for Ha Noi.
 
 This project is inspired by Asian Hackathon for Green Future 2026 with key challenge is urban air quality and climate resilience.  
 
 The model generates responses using RAG technique. 
- 
+
 As a prototype, the system may have limitations such as potential biases, occasional errors, and higher computational requirements.
 
-![RAG flowchart](Demo/1.png)
+![Demo picture](Demo/1.png)
 # 2. Instruction
 Download Ollama on your computer.   
 ``` bash
@@ -46,14 +46,16 @@ Install pips.
 ``` bash
 pip install langchain langchain-community langchain-core langchain-text-splitters langchain-huggingface langchain-ollama sentence-transformers faiss-cpu python-dotenv unstructured
 ```  
-Warning: Do not change path, order, code, name, file,... of the project if you feel unsure about what you are doing. 
+Warning: Do not change path, order, code, name, file,... of the project if you feel unsure about what you are doing.  
+
+Note: Check Config.py for commands.
 # 3. Learning
 ## 3.1. What is RAG?
 Retrieval augmented generation (RAG) is a technique enhancing AI by incorporating information retrieval capabilities. With RAG, LLMs first refer to a specified set of documents called knowledge base, then respond to user queries. This allows LLMs to use domain-specific training data for personal usage.  
 
 For example, AeroAxis LLM will access documents about air pollution, AQI, suggestion and generate response based on provided documents.
 
-![RAG flowchart](Demo/2.webp)
+![RAG process](Demo/2.webp)
 ## 3.2. How RAG works?
 ![RAG pipeline](Demo/3.png)
 ## 3.3. RAG in AeroAxis
@@ -71,27 +73,27 @@ For example, AeroAxis LLM will access documents about air pollution, AQI, sugges
     }
 }}%%
 graph TD
-    subgraph Data_Layer ["1. Data ingestion and storage"]
+    subgraph Data_layer ["1. Data ingestion and storage"]
         direction TB
         A[Directory loader] --- B[Recursive text splitter]
         B --> C[HuggingFace embeddings]
         C --> D[(FAISS vector database)]
     end
-    subgraph Logic_Layer ["2. Retrieval and inference"]
+    subgraph Logic_layer ["2. Retrieval and inference"]
         direction TB
         E[Retriever] --> F{Prompt engineering}
         F --> G[Llama-3.1 LLM]
         G --> H[Output parser]
     end
-    subgraph UI_Layer ["3. Interaction loop"]
+    subgraph UI_layer ["3. Interaction loop"]
         direction TB
-        I((User query)) --> J{Command Router}
-        J -.->|Null| K["Retry prompt"]
-        J -.->|Exit| L([Termination])
-        J -.->|Affirmative| M["Ready state"]
+        I((User query)) --> J{Command router}
+        J -.->|None| K["Retry prompt"]
+        J -.->|Stop| L([Termination])
+        J -.->|Inadequate| M["Ready state"]
         J ====|Normal| N["RAG chain execution"]
         N --> O["Display answer"]
-        O --> P["Dynamic Follow-up generator"]
+        O --> P["Dynamic follow-up generator"]
     end
     D -.->|Semantic context| E
     N ==>|Invoke| E
@@ -135,7 +137,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 splits = text_splitter.split_documents(docs)
 ```
 + Chunk_size: The size of the chunk.
-+ chunk_overlap: The overlap-range of the chunk.
++ Chunk_overlap: The overlap-range of the chunk.
 + Add_start_index: Save position in documents.
 + Strip_whitespace: Avoid whitespace.
 + Separators: The order of priority.
