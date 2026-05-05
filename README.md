@@ -20,10 +20,12 @@ Project/
 
 ```
 # 1. Introduction 
-This project demonstrates LLM set-up, knowledge base for AI explaination and recommendation on AeroAxis - an interactive air quality mapping system for Ha Noi.  
+This project demonstrates LLM set-up, knowledge base for AI explaination and recommendation on AeroAxis - an interactive air quality mapping system for Ha Noi.
+
 This project is inspired by Asian Hackathon for Green Future 2026 with key challenge is urban air quality and climate resilience.  
 
-The model generates responses using RAG technique.  
+The model generates responses using RAG technique. 
+ 
 As a prototype, the system may have limitations such as potential biases, occasional errors, and higher computational requirements.
 
 ![RAG flowchart](Demo/1.png)
