@@ -45,10 +45,10 @@ Ollama run llama3.1
 Install pips.
 ``` bash
 pip install langchain langchain-community langchain-core langchain-text-splitters langchain-huggingface langchain-ollama sentence-transformers faiss-cpu python-dotenv unstructured
-```  
-Warning: Do not change path, order, code, name, file,... of the project if you feel unsure about what you are doing.  
+```   
+<span style="color:red">Warning: Do not change path, order, code, name, file,... of the project if you feel unsure about what you are doing.</span>
 
-Note: Check Config.py for commands.
+**Note:** Check Config.py for commands.
 # 3. Learning
 ## 3.1. What is RAG?
 Retrieval augmented generation (RAG) is a technique enhancing AI by incorporating information retrieval capabilities. With RAG, LLMs first refer to a specified set of documents called knowledge base, then respond to user queries. This allows LLMs to use domain-specific training data for personal usage.  
