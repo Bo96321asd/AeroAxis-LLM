@@ -16,7 +16,7 @@ import Config
 
 # System
 logging.getLogger("langchain_core").setLevel(logging.ERROR) 
-warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category = UserWarning)
 
 load_dotenv()
 
@@ -77,37 +77,36 @@ rag_chain = (
 )
 
 # Prompt 
-last_prompt = None # In case LLM give the same question 
 print("=" * 140) # Split log and performance 
-print(f"{random.choice(Config.open_message)} :3")
+print(f"{random.choice(Config.open_message)}")
+last_prompt = None # In case the LLM give the same question 
 while True:
-    question = input()
-    command = question.strip().lower()
-    # None prompt
+    querry = input()
+    command = querry.strip().lower()
+    # None command
     if not command:
-        print("I did not get anything. Could you type the question again? :<")
+        print("I did not get anything. Could you type the question again?")
         continue
-    # Stop
-    if command in Config.stop_commands:
-        print(f"{random.choice(Config.exit_message)} :3")
+    # Stop command
+    elif command in Config.stop_commands:
+        print(f"{random.choice(Config.exit_message)}")
         break
-    # Short prompt
+    # Inadequate command
     elif command in Config.short_commands:
-        print(f"{random.choice(Config.ready_message)} :3")
+        print(f"{random.choice(Config.ready_message)}")
         continue 
-    # Avoid hallucination
     elif not re.search('[a-zA-Z0-9]', command):
-        print("I did not get anything. Could you type the question again? :<")
-    # Normal prompt
+        print("I did not get anything. Could you type the question again?")
+    # Normal command
     elif command:
         try:
-            answer = rag_chain.invoke(question)
+            answer = rag_chain.invoke(querry)
             print(answer)
         except Exception as e:
-            print("Error: Unable to process your request right now. :<")
-        # Follow-up question
-        next_prompt = f"{random.choice(Config.follow_up_question)} :3"
+            print("Error: Unable to process your request right now.")
+        # Follow-up generator
+        next_prompt = f"{random.choice(Config.follow_up_question)}"
         while next_prompt == last_prompt:
-            next_prompt = f"{random.choice(Config.follow_up_question)} :3"
+            next_prompt = f"{random.choice(Config.follow_up_question)}"
         print(next_prompt)
         last_prompt = next_prompt
